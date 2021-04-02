@@ -12,39 +12,59 @@ function App() {
   return (
     <div className="App">
       <div className="container-fluid p-0">
-        <BackgroundVideo/>
+        <BackgroundVideo />
         {/*Блок с описанием "проекта"*/}
         <RocketBlock
+          id={1}
           author={firstBlock.author}
-          text={firstBlock.text} 
+          text={firstBlock.text}
+          avatar={firstBlock.avatar}
+          instagram={firstBlock.instagram}
+          isBlockFirst={true}
+        />
+        <RocketBlock
+          id={2}
+          author={firstBlock.author}
+          text={firstBlock.text}
           avatar={firstBlock.avatar}
           instagram={firstBlock.instagram}
         />
         <RocketBlock
+          id={3}
           author={firstBlock.author}
-          text={firstBlock.text} 
+          text={firstBlock.text}
           avatar={firstBlock.avatar}
           instagram={firstBlock.instagram}
         />
         <RocketBlock
+          id={4}
           author={firstBlock.author}
-          text={firstBlock.text} 
+          text={firstBlock.text}
           avatar={firstBlock.avatar}
           instagram={firstBlock.instagram}
         />
         <RocketBlock
+          id={5}
           author={firstBlock.author}
-          text={firstBlock.text} 
+          text={firstBlock.text}
           avatar={firstBlock.avatar}
           instagram={firstBlock.instagram}
         />
         <RocketBlock
+          id={6}
           author={firstBlock.author}
-          text={firstBlock.text} 
+          text={firstBlock.text}
           avatar={firstBlock.avatar}
           instagram={firstBlock.instagram}
         />
-    </div>
+        <RocketBlock
+          id={7}
+          author={firstBlock.author}
+          text={firstBlock.text}
+          avatar={firstBlock.avatar}
+          instagram={firstBlock.instagram}
+        />
+      </div>
     </div>
   );
 }

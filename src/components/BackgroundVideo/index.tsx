@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.css';
 
 const BackgroundVideo = (): JSX.Element => {
-    const videoSource = "https://www.w3schools.com/tags/movie.mp4"
+    const videoSource = "opening.mp4"
     return (
         <div className={'Container'} >
             <video autoPlay loop muted className={'Video'} >

@@ -1,0 +1,14 @@
+.rocket-text {
+    height: 72px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.rocket-first-block-text {
+    height: 152px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
