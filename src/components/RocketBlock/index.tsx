@@ -48,7 +48,7 @@ const RocketBlock = (props: Props): JSX.Element => {
                             <Card.Body className={'p-2'}>
                                 <Card.Title className={'mb-0'}>
                                     <Row className={'justify-content-center'}>
-                                        <Col xs={3} md={1}/>
+                                        <Col xs={2} md={1}/>
                                         <Col xs={1} md={1} className={'p-4 align-self-center'}>
                                             {props.rocketBlockInfo.instagram && <Card.Link href={props.rocketBlockInfo.instagram} ><FaInstagram size={20} /></Card.Link>}
                                         </Col>
