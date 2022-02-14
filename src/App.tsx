@@ -5,7 +5,17 @@ import BackgroundVideo from './components/BackgroundVideo';
 import RocketBlock from './components/RocketBlock';
 import { Row, Col, Container } from 'react-bootstrap';
 
-import firstBlock from './texts/firstBlock.json';
+import SaltanAndrey from './texts/saltan_andrey.json';
+import SaltanElena from './texts/saltan_elena.json';
+import KuraksinaNatalya from './texts/kuraksina_natalya.json';
+import MarkidonovaAnna from './texts/markidonova_anna.json';
+import KononchukSemyon from './texts/kononchuk_semyon.json';
+import Example1 from './texts/example1.json';
+import ShadrinAndrey from './texts/shadrin_andrey.json';
+import Masha from './texts/masha.json';
+import BorodinaLubov from './texts/borodina_lyubov.json';
+import NikolaevaOlga from './texts/nikolayea_olga.json';
+import SharaevskayaMariya from './texts/sharaevskaya_mariya.json';
 
 
 function App() {
@@ -15,54 +25,48 @@ function App() {
         <BackgroundVideo />
         {/*Блок с описанием "проекта"*/}
         <RocketBlock
-          id={1}
-          author={firstBlock.author}
-          text={firstBlock.text}
-          avatar={firstBlock.avatar}
-          instagram={firstBlock.instagram}
+          rocketBlockInfo={SaltanAndrey}
           isBlockFirst={true}
         />
         <RocketBlock
-          id={2}
-          author={firstBlock.author}
-          text={firstBlock.text}
-          avatar={firstBlock.avatar}
-          instagram={firstBlock.instagram}
+          rocketBlockInfo={SaltanElena}
+          isBlockFirst={true}
         />
         <RocketBlock
-          id={3}
-          author={firstBlock.author}
-          text={firstBlock.text}
-          avatar={firstBlock.avatar}
-          instagram={firstBlock.instagram}
+          rocketBlockInfo={KuraksinaNatalya}
+          isBlockFirst={true}
         />
         <RocketBlock
-          id={4}
-          author={firstBlock.author}
-          text={firstBlock.text}
-          avatar={firstBlock.avatar}
-          instagram={firstBlock.instagram}
+          rocketBlockInfo={MarkidonovaAnna}
+          isBlockFirst={true}
         />
         <RocketBlock
-          id={5}
-          author={firstBlock.author}
-          text={firstBlock.text}
-          avatar={firstBlock.avatar}
-          instagram={firstBlock.instagram}
+          rocketBlockInfo={KononchukSemyon}
+          isBlockFirst={true}
         />
         <RocketBlock
-          id={6}
-          author={firstBlock.author}
-          text={firstBlock.text}
-          avatar={firstBlock.avatar}
-          instagram={firstBlock.instagram}
+          rocketBlockInfo={Example1}
+          isBlockFirst={true}
         />
         <RocketBlock
-          id={7}
-          author={firstBlock.author}
-          text={firstBlock.text}
-          avatar={firstBlock.avatar}
-          instagram={firstBlock.instagram}
+          rocketBlockInfo={ShadrinAndrey}
+          isBlockFirst={true}
+        />
+        <RocketBlock
+          rocketBlockInfo={Masha}
+          isBlockFirst={true}
+        />
+        <RocketBlock
+          rocketBlockInfo={BorodinaLubov}
+          isBlockFirst={true}
+        />
+        <RocketBlock
+          rocketBlockInfo={NikolaevaOlga}
+          isBlockFirst={true}
+        />
+        <RocketBlock
+          rocketBlockInfo={SharaevskayaMariya}
+          isBlockFirst={true}
         />
       </div>
     </div>
