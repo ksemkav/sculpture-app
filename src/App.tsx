@@ -6,13 +6,13 @@ import RocketBlock from './components/RocketBlock';
 import { Row, Col, Container } from 'react-bootstrap';
 
 import SaltanAndrey from './texts/saltan_andrey.json';
-import SaltanElena from './texts/saltan_elena.json';
+import SaltanElena from './texts/vorobyova_olga.json';
 import KuraksinaNatalya from './texts/kuraksina_natalya.json';
 import MarkidonovaAnna from './texts/markidonova_anna.json';
 import KononchukSemyon from './texts/kononchuk_semyon.json';
-import Example1 from './texts/example1.json';
+import Example1 from './texts/abramova_tatyana.json';
 import ShadrinAndrey from './texts/shadrin_andrey.json';
-import Masha from './texts/masha.json';
+import Masha from './texts/sharomova_mariya.json';
 import BorodinaLubov from './texts/borodina_lyubov.json';
 import NikolaevaOlga from './texts/nikolayea_olga.json';
 import SharaevskayaMariya from './texts/sharaevskaya_mariya.json';
