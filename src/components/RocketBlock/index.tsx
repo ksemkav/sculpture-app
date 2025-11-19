@@ -39,7 +39,7 @@ const RocketBlock = (props: Props) => {
                                         />
                                         {key === 0 && (
                                             <Carousel.Caption className="rocket-carousel-caption">
-                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                <div className="d-flex align-items-center justify-content-center align-self-center gap-2">
                                                     <span>{props.rocketBlockInfo.author}</span>
                                                     {props.rocketBlockInfo.instagram && (
                                                         <a
@@ -47,8 +47,9 @@ const RocketBlock = (props: Props) => {
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             className="text-decoration-none text-white"
+                                                            style={{fontSize: '1.2em'}}
                                                         >
-                                                            <FaInstagram size={20} />
+                                                            <FaInstagram/>
                                                         </a>
                                                     )}
                                                 </div>
