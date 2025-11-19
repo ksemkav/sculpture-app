@@ -1,9 +1,8 @@
-import React from 'react';
 import { AttentionSeeker } from 'react-awesome-reveal';
 
 import './styles.css';
 
-const BackgroundVideo = (): JSX.Element => {
+const BackgroundVideo = () => {
     const videoSource = "opening.mp4"
     return (
         <AttentionSeeker triggerOnce effect={'pulse'}>

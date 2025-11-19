@@ -1,2 +1,13 @@
-.App {
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure full-width layout */
+.container-fluid {
+  padding: 0 !important;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
 }

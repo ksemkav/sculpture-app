@@ -1,6 +1,5 @@
-import React from 'react';
-import { Slide } from 'react-awesome-reveal';
-import { Row, Col, Carousel, Card, Image } from 'react-bootstrap';
+import { Fade } from 'react-awesome-reveal';
+import { Row, Col, Carousel } from 'react-bootstrap';
 import { FaInstagram } from "react-icons/fa";
 import './styles.css';
 
@@ -11,58 +10,57 @@ interface Props {
 
 interface RocketBlockInfo {
     id: number;
-    text: string;
+    text?: string;
     avatar?: string;
     instagram?: string;
     author: string;
 }
 
-const RocketBlock = (props: Props): JSX.Element => {
+const RocketBlock = (props: Props) => {
     const imageSources: Array<string> = [];
     for (let i = 1; i <= 3; i++) {
         const imageSource: string = `rocket-blocks-images/${props.rocketBlockInfo.id}_${i}.jpg`;
         imageSources.push(imageSource);
     }
+
     return (
-        <>
-            <Row noGutters className={'justify-content-center'}>
-                <Col md={6} xs={12} className={"p-1 align-self-center"}>
-                    <Slide triggerOnce>
-                        <Carousel>
+        <div className="container-fluid">
+            <Row className="justify-content-center g-0">
+                <Col md={8} lg={6} xs={12} className="p-2">
+                    <Fade triggerOnce>
+                        <Carousel className="h-100" interval={null} touch fade>
                             {
                                 imageSources.map((imgSource, key) => (
                                     <Carousel.Item key={key}>
                                         <img
                                             className="d-block w-100"
                                             src={imgSource}
-                                            alt=""
+                                            alt={`${props.rocketBlockInfo.author} - Image ${key + 1}`}
                                         />
+                                        {key === 0 && (
+                                            <Carousel.Caption className="rocket-carousel-caption">
+                                                <div className="d-flex align-items-center justify-content-center gap-2">
+                                                    <span>{props.rocketBlockInfo.author}</span>
+                                                    {props.rocketBlockInfo.instagram && (
+                                                        <a
+                                                            href={props.rocketBlockInfo.instagram}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-decoration-none text-white"
+                                                        >
+                                                            <FaInstagram size={20} />
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </Carousel.Caption>
+                                        )}
                                     </Carousel.Item>))
                             }
                         </Carousel>
-                    </Slide>
-                </Col>
-                <Col md={6} xs={12} className={"p-1 align-self-center"}>
-                    <Slide triggerOnce direction={'right'}>
-                        <Card>
-                            <Card.Body className={'p-2'}>
-                                <Card.Title className={'mb-0'}>
-                                    <Row className={'justify-content-center'}>
-                                        <Col xs={2} md={1}/>
-                                        <Col xs={1} md={1} className={'p-4 align-self-center'}>
-                                            {props.rocketBlockInfo.instagram && <Card.Link href={props.rocketBlockInfo.instagram} ><FaInstagram size={20} /></Card.Link>}
-                                        </Col>
-                                        <Col xs={8} md={10} className={'p-4 align-self-center'}>
-                                            <div>{props.rocketBlockInfo.author}</div>
-                                        </Col>
-                                    </Row>
-                                </Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Slide>
+                    </Fade>
                 </Col>
             </Row>
-        </>
+        </div>
     );
 }
 

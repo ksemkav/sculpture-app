@@ -1,14 +1,71 @@
-.rocket-text {
-    height: 72px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+/* Carousel caption styling */
+.rocket-carousel-caption {
+    background-color: rgba(52, 58, 64, 0.75) !important;
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 10px 18px !important;
+    bottom: 20px !important;
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    width: auto !important;
+    max-width: 80%;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+.rocket-carousel-caption a {
+    color: white;
+    transition: opacity 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
 
+.rocket-carousel-caption a:hover {
+    opacity: 0.8;
+}
+
+.rocket-text {
+    max-height: 96px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    margin: 0;
+}
 
 .rocket-first-block-text {
-    height: 152px;
+    max-height: 192px;
     overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
     text-overflow: ellipsis;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Ensure cards have equal height on larger screens */
+@media (min-width: 768px) {
+    .rocket-text,
+    .rocket-first-block-text {
+        min-height: 96px;
+    }
+}
+
+/* Adjust line clamps for mobile */
+@media (max-width: 767px) {
+    .rocket-text {
+        max-height: 120px;
+        -webkit-line-clamp: 5;
+    }
+
+    .rocket-first-block-text {
+        max-height: 240px;
+        -webkit-line-clamp: 10;
+    }
 }
 
